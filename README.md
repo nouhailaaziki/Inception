@@ -8,58 +8,6 @@ Inception is a system administration project designed to expand practical knowle
 
 The core objective is to host a WordPress website running under PHP-FPM, backed by a MariaDB database, and served securely via an NGINX reverse proxy restricted to TLS v1.2 or TLS v1.3 protocols over port 443.
 
-## Project Structure
-
-Below is the repository directory layout including all mandatory and bonus service directories:
-
-```text
-.
-├── Makefile
-├── README.md
-├── DEV_DOC.md
-├── USER_DOC.md
-├── secrets/
-│   ├── credentials.txt
-│   ├── db_password.txt
-│   └── db_root_password.txt
-└── srcs/
-    ├── .env
-    ├── docker-compose.yml
-    └── requirements/
-        ├── mariadb/
-        │   ├── conf/
-        │   ├── Dockerfile
-        │   ├── .dockerignore
-        │   └── tools/
-        ├── nginx/
-        │   ├── conf/
-        │   ├── Dockerfile
-        │   ├── .dockerignore
-        │   └── tools/
-        ├── wordpress/
-        │   ├── conf/
-        │   ├── Dockerfile
-        │   ├── .dockerignore
-        │   └── tools/
-        └── bonus/
-            ├── adminer/
-            │   ├── Dockerfile
-            │   └── conf/
-            ├── ftp/
-            │   ├── Dockerfile
-            │   ├── conf/
-            │   └── tools/
-            ├── redis/
-            │   ├── Dockerfile
-            │   └── conf/
-            ├── static_site/
-            │   ├── Dockerfile
-            │   └── html/
-            └── cadvisor/
-                ├── Dockerfile
-                └── conf/
-```
-
 ## Architectural Overview & Conceptual Comparisons
 
 ### Design Choices
