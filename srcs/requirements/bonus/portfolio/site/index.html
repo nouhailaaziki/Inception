@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>noaziki — Portfolio</title>
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+	<header class="hero">
+		<nav>
+			<span class="logo">noaziki</span>
+			<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="hero-content">
+			<h1>Hi, I'm Nouhaila Aziki</h1>
+			<p>42 student — building things, one container at a time.</p>
+		</div>
+	</header>
+
+	<main>
+		<section id="about">
+			<h2>About</h2>
+			<p>
+				I'm a student at 42, currently working through the common core
+				curriculum. This portfolio itself runs as one of the bonus
+				services of my <strong>Inception</strong> project — a small
+				multi-container infrastructure built with Docker Compose,
+				NGINX, WordPress, MariaDB, and a few extras.
+			</p>
+		</section>
+
+		<section id="projects">
+			<h2>Projects</h2>
+			<div class="cards">
+				<article class="card">
+					<h3>Inception</h3>
+					<p>A Dockerized infrastructure: NGINX (TLS-only entrypoint),
+					WordPress + php-fpm, MariaDB, Redis cache, FTP, Adminer,
+					and this portfolio — each in its own container, built from
+					scratch, no pulled images.</p>
+				</article>
+				<article class="card">
+					<h3>More coming soon</h3>
+					<p>This page is intentionally simple — it's a bonus
+					service for the Inception project, not the main event.</p>
+				</article>
+			</div>
+		</section>
+
+		<section id="skills">
+			<h2>Skills</h2>
+			<ul class="skills">
+				<li>C</li>
+				<li>Shell</li>
+				<li>Docker &amp; Docker Compose</li>
+				<li>Linux system administration</li>
+				<li>Networking basics</li>
+			</ul>
+		</section>
+
+		<section id="contact">
+			<h2>Contact</h2>
+			<p>Reach me at <a href="mailto:noaziki@student.42.fr">noaziki@student.42.fr</a></p>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; <span id="year"></span> noaziki — served from the <code>portfolio</code> container.</p>
+	</footer>
+
+	<script src="assets/script.js"></script>
+</body>
+</html>
