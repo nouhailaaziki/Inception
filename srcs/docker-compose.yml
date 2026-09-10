@@ -109,18 +109,8 @@ networks:
 volumes:
   db_data:
     name: db_data
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${DATA_PATH}/mariadb
   wp_data:
     name: wp_data
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: ${DATA_PATH}/wordpress
 
 secrets:
   db_root_password:
