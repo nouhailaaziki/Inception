@@ -101,6 +101,20 @@ services:
     networks:
       - inception
 
+  netdata:
+    build:
+      context: ./requirements/bonus/netdata
+    image: netdata
+    container_name: netdata
+    restart: on-failure
+    ports:
+      - "19999:19999"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
+    networks:
+      - inception
+
 networks:
   inception:
     name: inception
