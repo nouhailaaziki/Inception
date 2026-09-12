@@ -1,79 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>noaziki — Portfolio</title>
-	<link rel="stylesheet" href="assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nouhaila Aziki - Software Engineer Candidate</title>
+<meta name="description" content="Nouhaila Aziki (noaziki) - software engineering student at 1337 / 42 Network. Infrastructure, full-stack, systems and AI projects.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b0c0e'/%3E%3Ctext x='16' y='21' font-family='Helvetica,Arial,sans-serif' font-size='13' font-weight='700' fill='%23e2a85b' text-anchor='middle'%3ENA%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-	<header class="hero">
-		<nav>
-			<span class="logo">noaziki</span>
-			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#skills">Skills</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</nav>
-		<div class="hero-content">
-			<h1>Hi, I'm Nouhaila Aziki</h1>
-			<p>42 student — building things, one container at a time.</p>
-		</div>
-	</header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-	<main>
-		<section id="about">
-			<h2>About</h2>
-			<p>
-				I'm a student at 42, currently working through the common core
-				curriculum. This portfolio itself runs as one of the bonus
-				services of my <strong>Inception</strong> project — a small
-				multi-container infrastructure built with Docker Compose,
-				NGINX, WordPress, MariaDB, and a few extras.
-			</p>
-		</section>
+<!-- Reusable icon sprite -->
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true">
+  <symbol id="icon-github" viewBox="0 0 24 24">
+    <path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a10.9 10.9 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.6.23 2.76.11 3.05.73.8 1.18 1.82 1.18 3.08 0 4.43-2.7 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+  </symbol>
+  <symbol id="icon-linkedin" viewBox="0 0 24 24">
+    <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-4V9Z"/>
+  </symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24">
+    <path d="M3 5.5h18a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1Zm1.4 1.6 7.6 6.2 7.6-6.2H4.4Zm15.6 1.34-7.06 5.75a1 1 0 0 1-1.26 0L4.6 8.44V17h15.4V8.44Z"/>
+  </symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+    <path d="M5 12h13.2m-5-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+    <path d="M7 17 17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
 
-		<section id="projects">
-			<h2>Projects</h2>
-			<div class="cards">
-				<article class="card">
-					<h3>Inception</h3>
-					<p>A Dockerized infrastructure: NGINX (TLS-only entrypoint),
-					WordPress + php-fpm, MariaDB, Redis cache, FTP, Adminer,
-					and this portfolio — each in its own container, built from
-					scratch, no pulled images.</p>
-				</article>
-				<article class="card">
-					<h3>More coming soon</h3>
-					<p>This page is intentionally simple — it's a bonus
-					service for the Inception project, not the main event.</p>
-				</article>
-			</div>
-		</section>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="#top" aria-label="noaziki - back to top">
+      <span class="logo-mark" aria-hidden="true">NA</span>
+      <span class="logo-word">noaziki</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#top" data-nav>Home</a></li>
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#journey" data-nav>Journey</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-		<section id="skills">
-			<h2>Skills</h2>
-			<ul class="skills">
-				<li>C</li>
-				<li>Shell</li>
-				<li>Docker &amp; Docker Compose</li>
-				<li>Linux system administration</li>
-				<li>Networking basics</li>
-			</ul>
-		</section>
+<main id="main">
 
-		<section id="contact">
-			<h2>Contact</h2>
-			<p>Reach me at <a href="mailto:noaziki@student.42.fr">noaziki@student.42.fr</a></p>
-		</section>
-	</main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <h1>Nouhaila Aziki</h1>
+        <p class="hero-role">Software engineer candidate at 1337, part of the 42 Network.</p>
+        <p class="hero-statement">
+          I build software, systems, and ideas - from low-level infrastructure
+          to full-stack applications.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">
+            View projects
+            <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+          </a>
+          <a class="btn btn-ghost" href="#about">About me</a>
+        </div>
+        <ul class="hero-links" aria-label="Elsewhere">
+          <li>
+            <a href="https://github.com/nouhailaaziki" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/nouhailaaziki/" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contact.naziki@gmail.com">
+              <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+              Email
+            </a>
+          </li>
+        </ul>
+      </div>
 
-	<footer>
-		<p>&copy; <span id="year"></span> noaziki — served from the <code>portfolio</code> container.</p>
-	</footer>
+      <aside class="status-panel" data-reveal aria-label="Current status">
+        <dl>
+          <div class="status-row">
+            <dt>School</dt>
+            <dd>1337 · 42 Network</dd>
+          </div>
+          <div class="status-row">
+            <dt>Program</dt>
+            <dd>Software Engineering</dd>
+          </div>
+          <div class="status-row">
+            <dt>Since</dt>
+            <dd>October 2024</dd>
+          </div>
+          <div class="status-row">
+            <dt>Method</dt>
+            <dd>Peer-to-peer, project-based</dd>
+          </div>
+          <div class="status-row">
+            <dt>Focus</dt>
+            <dd>Systems · full-stack · AI/CV</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>
 
-	<script src="assets/script.js"></script>
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="section-inner about-grid">
+      <h2 id="about-title">About</h2>
+      <div class="about-copy" data-reveal>
+        <p>
+          I'm a software engineering student at 1337, the Moroccan campus of
+          the 42 Network. There are no lectures and no teachers in the usual
+          sense - the curriculum is built around peer-to-peer learning,
+          project-based work, and figuring things out largely on your own,
+          with code review standing in for grading.
+        </p>
+        <p>
+          Most of what I know, I learned by building something, breaking it,
+          and reading until I understood why. That applies as much to
+          debugging a container network at 2am as it does to picking apart
+          an unfamiliar framework for the first time. I've gotten comfortable
+          with not knowing something yet.
+        </p>
+        <p>
+          I'm drawn to the layers underneath the interface - Linux,
+          infrastructure, backend systems - but I like full-stack work just
+          as much, and lately I've been spending time on computer vision and
+          applied AI. What connects it all is the same instinct: open it up
+          and see how it actually works.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section" aria-labelledby="projects-title">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="projects-title">Selected projects</h2>
+        <p class="section-lede">
+          A mix of 42/1337 coursework and things I built on my own - spanning
+          infrastructure, full-stack apps, systems software, and applied AI.
+        </p>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter projects by category">
+        <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="infra">Infrastructure</button>
+        <button type="button" class="filter-btn" data-filter="web">Web &amp; product</button>
+        <button type="button" class="filter-btn" data-filter="systems">Systems</button>
+        <button type="button" class="filter-btn" data-filter="ai">AI / CV</button>
+      </div>
+
+      <ul class="project-list">
+
+        <li class="project" data-category="infra" data-reveal>
+          <span class="project-index">01</span>
+          <div class="project-body">
+            <div class="project-heading">
+              <h3>Inception</h3>
+              <span class="project-tag project-tag--muted">Live infrastructure</span>
+            </div>
+            <p class="project-desc">
+              A multi-container infrastructure built from scratch with Docker
+              Compose: an NGINX entrypoint over TLS, WordPress on PHP-FPM,
+              MariaDB, a Redis cache, FTP, Adminer, and Netdata for
+              monitoring - each service in its own container on a custom
+              network, with persistent volumes instead of throwaway state.
+              This portfolio is one of its bonus services.
+            </p>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>Docker</li><li>Docker Compose</li><li>NGINX</li>
+              <li>MariaDB</li><li>Redis</li><li>TLS</li><li>Linux</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="project" data-category="web" data-reveal>
+          <span class="project-index">02</span>
+          <div class="project-body">
+            <div class="project-heading">
+              <h3>1337 Legends</h3>
+			  <span class="project-tag project-tag--status">In progress</span>
+            </div>
+            <p class="project-desc">
+              A small platform for 1337 students to check where they stand -
+              ranking and level progression inside the school, in one place
+              instead of scattered across the intranet.
+            </p>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>Web platform</li><li>Rankings</li><li>Student tools</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="project" data-category="web" data-reveal>
+          <span class="project-index">03</span>
+          <div class="project-body">
+            <div class="project-heading">
+              <h3>Opath</h3>
+			  <span class="project-tag project-tag--status">In progress</span>
+            </div>
+            <p class="project-desc">
+              A smart travel-planning app that puts a whole trip together
+              instead of just a checklist - where to go, where to stay,
+              estimated costs, and a day-by-day itinerary. More planning
+              features are on the way.
+            </p>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>Travel planning</li><li>Product</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="project" data-category="web ai" data-reveal>
+          <span class="project-index">04</span>
+          <div class="project-body">
+            <div class="project-heading">
+              <h3>Ecozen</h3>
+			  <span class="project-tag project-tag--status">In progress</span>
+            </div>
+            <p class="project-desc">
+              An app for tracking water and electricity use at home:
+              real-time consumption, personal usage goals, leak detection,
+              and AI-based recommendations aimed at lower bills and less
+              waste.
+            </p>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>Sustainability</li><li>AI recommendations</li><li>Product</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="project" data-category="systems" data-reveal>
+          <span class="project-index">05</span>
+          <div class="project-body">
+            <div class="project-heading">
+              <h3>Pulsetrix</h3>
+			  <span class="project-tag project-tag--status">In progress</span>
+            </div>
+            <p class="project-desc">
+              A real-time observability platform for Linux systems. A native
+              C++ agent collects metrics on the host, a Java Spring Boot
+              backend processes and stores them in PostgreSQL, and an
+              Angular dashboard turns the data into something readable -
+              built to understand what a system is actually doing, not just
+              whether it's up.
+            </p>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>C++</li><li>Java</li><li>Spring Boot</li><li>Angular</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="project" data-category="ai" data-reveal>
+          <span class="project-index">06</span>
+          <div class="project-body">
+            <div class="project-heading">
+              <h3>Sowty</h3>
+              <span class="project-tag project-tag--status">In progress</span>
+            </div>
+            <p class="project-desc">
+              An accessibility project that reads sign language through a
+              camera using computer vision, then turns it into text and
+              speech in real time. The goal is to close a communication gap
+              between deaf and hearing people - built as a tool people could
+              actually use, not a tech demo.
+            </p>
+            <ul class="project-tech" aria-label="Technologies used">
+              <li>Computer vision</li><li>AI</li><li>Real-time</li><li>Accessibility</li>
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+
+      <p class="projects-footnote">
+        More on
+        <a href="https://github.com/nouhailaaziki" target="_blank" rel="noopener noreferrer">GitHub
+          <svg class="icon icon-inline" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+        </a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section" aria-labelledby="skills-title">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="skills-title">Technical skills</h2>
+        <p class="section-lede">
+          What I reach for, grouped by where it lives in a system.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-group" data-reveal>
+          <h3>Languages</h3>
+          <ul class="tag-list">
+            <li>C</li><li>C++</li><li>Java</li><li>JavaScript</li><li>Python</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-reveal>
+          <h3>Systems &amp; infrastructure</h3>
+          <ul class="tag-list">
+            <li>Linux</li><li>Docker</li><li>Docker Compose</li><li>NGINX</li>
+            <li>Networking</li><li>TLS</li><li>System administration</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-reveal>
+          <h3>Backend</h3>
+          <ul class="tag-list">
+            <li>Spring Boot</li><li>REST APIs</li><li>Full-stack development</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-reveal>
+          <h3>Frontend</h3>
+          <ul class="tag-list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Angular</li><li>Flutter</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-reveal>
+          <h3>Databases</h3>
+          <ul class="tag-list">
+            <li>PostgreSQL</li><li>Supabase</li><li>MariaDB</li><li>MySQL</li>
+          </ul>
+        </div>
+        <div class="skill-group" data-reveal>
+          <h3>AI &amp; computer vision</h3>
+          <ul class="tag-list">
+            <li>Computer vision</li><li>Real-time recognition</li><li>Applied AI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY (education + philosophy) ============ -->
+  <section id="journey" class="section" aria-labelledby="journey-title">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2 id="journey-title">Journey</h2>
+      </div>
+
+      <div class="timeline" data-reveal>
+        <div class="timeline-marker" aria-hidden="true"></div>
+        <div class="timeline-content">
+          <div class="timeline-when">October 2024 - Present · Morocco</div>
+          <h3>1337 Coding School - 42 Network</h3>
+          <p class="timeline-track">Software Engineering Program</p>
+          <p>
+            A curriculum built on peer-to-peer learning and project-based
+            work instead of lectures: self-learning, code reviews from
+            other students, and technical problems that assume you'll
+            figure out the parts nobody taught you.
+          </p>
+          <ul class="tag-list">
+            <li>Peer-to-peer</li><li>Project-based</li><li>Self-learning</li>
+            <li>Code reviews</li><li>Collaboration</li>
+          </ul>
+        </div>
+      </div>
+
+      <blockquote class="philosophy" data-reveal>
+        <p>
+          I'd rather understand how a system fails than have it work by
+          accident. Most of what I build starts with taking something apart
+         - a stack, a protocol, someone else's code - until the unfamiliar
+          part stops being unfamiliar.
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section section--contact" aria-labelledby="contact-title">
+    <div class="section-inner">
+      <div class="contact-head" data-reveal>
+        <h2 id="contact-title">Let's talk</h2>
+        <p class="section-lede">
+          Open to internships, collaborations, and conversations about
+          anything I've built here. I read everything that lands in my inbox.
+        </p>
+      </div>
+
+      <ul class="contact-list" data-reveal>
+        <li>
+          <a href="mailto:contact.naziki@gmail.com">
+            <span class="contact-label">
+              <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+              Email
+            </span>
+            <span class="contact-value">contact.naziki@gmail.com</span>
+            <svg class="icon icon-go" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/nouhailaaziki" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">
+              <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+              GitHub
+            </span>
+            <span class="contact-value">github.com/nouhailaaziki</span>
+            <svg class="icon icon-go" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/nouhailaaziki/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">
+              <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+              LinkedIn
+            </span>
+            <span class="contact-value">linkedin.com/in/nouhailaaziki</span>
+            <svg class="icon icon-go" aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <p>&copy; <span id="year">2026</span> Nouhaila Aziki - built as the bonus service of the Inception project, served from the <code>portfolio</code> container.</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
 </body>
 </html>
