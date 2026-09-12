@@ -3,7 +3,7 @@ services:
   mariadb:
     build:
       context: ./requirements/mariadb
-    image: mariadb
+    image: mariadb:inception
     container_name: mariadb
     restart: on-failure
     env_file: .env
@@ -18,7 +18,7 @@ services:
   wordpress:
     build:
       context: ./requirements/wordpress
-    image: wordpress
+    image: wordpress:inception
     container_name: wordpress
     restart: on-failure
     depends_on:
@@ -36,7 +36,7 @@ services:
   nginx:
     build:
       context: ./requirements/nginx
-    image: nginx
+    image: nginx:inception
     container_name: nginx
     restart: on-failure
     depends_on:
@@ -54,7 +54,7 @@ services:
   redis:
     build:
       context: ./requirements/bonus/redis
-    image: redis
+    image: redis:inception
     container_name: redis
     restart: on-failure
     networks:
@@ -63,7 +63,7 @@ services:
   ftp:
     build:
       context: ./requirements/bonus/ftp
-    image: ftp
+    image: ftp:inception
     container_name: ftp
     restart: on-failure
     env_file: .env
@@ -80,7 +80,7 @@ services:
   adminer:
     build:
       context: ./requirements/bonus/adminer
-    image: adminer
+    image: adminer:inception
     container_name: adminer
     restart: on-failure
     depends_on:
@@ -93,7 +93,7 @@ services:
   portfolio:
     build:
       context: ./requirements/bonus/portfolio
-    image: portfolio
+    image: portfolio:inception
     container_name: portfolio
     restart: on-failure
     ports:
@@ -104,7 +104,7 @@ services:
   netdata:
     build:
       context: ./requirements/bonus/netdata
-    image: netdata
+    image: netdata:inception
     container_name: netdata
     restart: on-failure
     ports:
@@ -122,9 +122,18 @@ networks:
 
 volumes:
   db_data:
-    name: db_data
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/noaziki/data/mariadb
+
   wp_data:
-    name: wp_data
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/noaziki/data/wordpress
 
 secrets:
   db_root_password:
