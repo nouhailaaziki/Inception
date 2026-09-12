@@ -7,10 +7,21 @@ WP_USER_PASSWORD="$(cat /run/secrets/wp_user_password)"
 
 WP="wp --allow-root --path=/var/www/html"
 
-echo "[wordpress] Waiting for MariaDB to accept connections..."
+MAX_RETRIES=10
+RETRY=0
+
 until mysqladmin -h mariadb -u "${MYSQL_USER}" -p"${DB_PASSWORD}" ping >/dev/null 2>&1; do
-	sleep 2
+    RETRY=$((RETRY + 1))
+
+    if [ "$RETRY" -ge "$MAX_RETRIES" ]; then
+        echo "MariaDB is not available after $MAX_RETRIES attempts."
+        exit 1
+    fi
+
+    echo "[wordpress] Waiting for MariaDB to accept connections... ($RETRY/$MAX_RETRIES)"
+    sleep 2
 done
+
 echo "[wordpress] MariaDB is up."
 
 if [ ! -f /var/www/html/wp-config.php ]; then
