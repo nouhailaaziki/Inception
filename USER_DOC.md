@@ -63,7 +63,7 @@ Usernames (not secret) are set in `srcs/.env`:
 - WordPress administrator: `WP_ADMIN_USER` (currently `noaziki_boss`)
 - WordPress second user: `WP_USER` (currently `noaziki_editor`)
 - FTP user: `FTP_USER` (currently `noaziki_ftp`)
-- Database user: `MYSQL_USER` (currently `wp_user`), database name `MYSQL_DATABASE`
+- Database user: `MYSQL_USER` (currently `wpuser`), database name `MYSQL_DATABASE`
 
 To change a password: edit the relevant file in `secrets/`, then recreate
 the affected container (e.g. `docker compose -f srcs/docker-compose.yml up -d --build wordpress`)

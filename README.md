@@ -112,12 +112,12 @@ This provides isolation and allows each service to be restarted or replaced inde
 
 ### Persistent Storage
 
-MariaDB and WordPress use named Docker volumes:
+MariaDB and WordPress use Docker named volumes for persistent data:
 
-* `srcs_db_data` -> `/var/lib/mysql`
-* `srcs_wp_data` -> WordPress files
+* `srcs_db_data` -> mounted at `/var/lib/mysql` in the MariaDB container
+* `srcs_wp_data` -> mounted at `/var/www/html` in the WordPress container
 
-This allows important data to survive container recreation.
+The volumes keep the database and WordPress files available when containers are recreated.
 
 ### Docker Network
 
@@ -244,12 +244,12 @@ This project uses named volumes for MariaDB and WordPress data:
 srcs_db_data
 srcs_wp_data
 ```
-
-Docker's data root is configured on the project environment so that persistent Docker data is stored under:
+Docker's named volumes are backed by persistent host directories under:
 
 ```text
-/home/noaziki/data
-```
+/home/noaziki/data/
+├── mariadb/
+└── wordpress/
 
 ---
 

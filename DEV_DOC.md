@@ -67,8 +67,9 @@ srcs/.env ...`).
 docker compose -f srcs/docker-compose.yml ps
 docker compose -f srcs/docker-compose.yml logs -f <service>
 docker compose -f srcs/docker-compose.yml exec wordpress bash
-docker volume ls                     # shows db_data, wp_data
-docker volume inspect wp_data        # shows the bind Mountpoint on host
+docker volume ls                     # shows srcs_db_data, srcs_wp_data
+docker volume inspect srcs_wp_data        # shows the bind Mountpoint on host
+docker volume inspect srcs_db_data        # shows the bind Mountpoint on host
 docker network inspect inception     # shows all 7 containers attached
 ```
 
@@ -115,7 +116,7 @@ Two Docker **named volumes**, both using the `local` driver with
 `driver_opts.o=bind`, so Docker manages the volume lifecycle while the
 data is guaranteed to live at a fixed, inspectable host path:
 
-| Volume    | Container mount point   | Host path (via `DATA_PATH` in `.env`) |
+| Volume    | Container mount point   | Host path  |
 |-----------|--------------------------|-----------------------------------------|
 | `db_data` | `/var/lib/mysql` (mariadb) | `/home/noaziki/data/mariadb` |
 | `wp_data` | `/var/www/html` (wordpress, mounted read-only in nginx, read-write in ftp) | `/home/noaziki/data/wordpress` |
